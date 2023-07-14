@@ -1,0 +1,11 @@
+<view class="container">
+    <view wx:for="{{policy}}" class="title-content" wx:key="index">
+        <view class="title">
+            <view class="left"></view>
+            <view class="right">{{item.title}}</view>
+        </view>
+        <view class="content" wx:for="{{item.content}}" wx:key="index">
+            {{item}}
+        </view>
+    </view>
+</view>

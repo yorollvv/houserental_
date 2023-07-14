@@ -1,0 +1,42 @@
+<view class="container">
+    <form bindsubmit="formSubmit">
+    <!-- 真实姓名 -->
+    <view class="u-name">
+        <text>真实姓名：</text>
+        <input name="realName" placeholder="请输入真实名字" placeholder-style="font-size:28rpx;color:rgba(0,0,0,.5);margin-top:-5rpx;margin-left:10rpx " value="{{form.realName}}"/>
+    </view>
+    <view class="line"></view>
+    <!-- 手机号 -->
+    <view class="u-tel">
+        <text>手机号：</text>
+        <input name="phone" placeholder="请输入手机号" placeholder-style="font-size:28rpx;color:rgba(0,0,0,.5);margin-top:-5rpx;margin-left:10rpx" value="{{form.phone}}"/>
+    </view>
+    <view class="line"></view>
+
+    <!-- 身份证 -->
+    <view class="u-id">
+        <text>身份证号：</text>
+        <input name="id" placeholder="请输入身份证号" placeholder-style="font-size:28rpx;color:rgba(0,0,0,.5);margin-top:-5rpx;margin-left:10rpx" value="{{form.id}}"/>
+    </view>
+    <view class="line"></view>
+
+    <!-- 性别 -->
+    <view class="u-sex">
+        <text decode="{{true}}">性&nbsp;&nbsp;&nbsp;&nbsp;别：</text>
+        <radio-group  name="sex" class="radio-group" bindchange="radioChange"> 
+      <label class="radio" wx:for="{{sexList}}" wx:key="value">
+        <radio value="{{item.value}}" checked="{{item.checked}}" />{{item.value}}
+      </label>
+    </radio-group>
+
+
+
+  </view>
+    
+    <view class="line"></view>
+    <!-- 发布按钮 -->
+    <view class="btn-area">
+    <button formType="submit" >提交</button>
+  </view>
+    </form>
+</view>

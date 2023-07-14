@@ -1,0 +1,71 @@
+<view class="container">
+  <view class="detail">
+    <!-- 轮播图 -->
+    <view class="swiper-box">
+        <swiper class="swiper" duration="{{duration}}" indicator-dots="{{indicatorDots}}" autoplay="{{true}}" indicator-active-color="#ffffff">
+            <block wx:for="{{house}}" wx:key='index'>
+                <swiper-item class="banner">
+                    <image src="{{item.hPic}}" class="slide-image" mode="aspectFill" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <view class="info">
+        <view class="title">{{house[0].hcity + house[0].hName }}</view>
+       
+        <view class="telphone" >业主联系电话：{{house[0].uTel}}</view>
+        <!-- 房源描述 -->
+        <view class="rent-time" >地址：{{house[0].hAddress}}</view>
+        <view class="house-info">
+            <view class="house-info-view">
+                <text class="colorText">{{house[0].hRent}}</text>
+                <text class="simple">/天</text>
+            </view>
+            <view class="house-info-view">
+                <text class="colorText">{{house[0].hType}}</text>
+                <text class="simple">户型</text>
+            </view>
+            <view class="house-info-view">
+                <text class="colorText">{{house[0].hArea}}</text>
+                <text class="simple">面积(㎡)</text>
+            </view>
+            <view class="house-info-view">
+              
+                <text class="colorText" wx:if="{{ house[0].hMode==='整租'}}">{{house[0].hMode}}</text>
+                <text class="colorText" wx:else>{{house[0].hMode + ' (' +house[0].state+'/' +house[0].hPeopleNum+'人)'}}</text>
+                <text class="simple">类型</text>
+            </view>
+        </view>
+        <!-- 分隔线 -->
+        <view class="line"></view>
+        <!-- 房源配置  allocation -->
+        <!-- <view class="allocation">
+            <text class="title">房源配置</text>
+            <view class="allocation-info">
+                <view wx:for="{{disopose}}" wx:key="index" class="allocation-info-view">
+                    <image src="{{item.img}}" class="allocation-info-text"/>
+                    <text class="allocation-info-text">{{item.text}}</text>
+                </view>
+            </view>
+        </view> -->
+        <!-- 分隔线 -->
+        <!-- <view class="line"></view> -->
+        <!-- 房源描述 -->
+        <view class="describe">
+            <text class="title">房源描述</text>
+            <view class="content">{{house[0].hDetail}}</view>
+        </view>
+    </view>
+
+
+  </view>
+    <!-- 分隔块 -->
+    <view class="line-box"></view>
+    <!-- 线上签约 看房申请 -->
+    <view class="btn-list">
+       <view class="star-btn" catch:tap="onStar">收藏房源</view>
+        <view class="contact-btn" catch:tap="onCall">联系业主</view>
+        <view class="sign-btn" catch:tap="onSign">线上签约</view> 
+    </view>
+</view>

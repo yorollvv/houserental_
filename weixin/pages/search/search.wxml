@@ -1,0 +1,26 @@
+<view>
+    <view class="search-box">
+        <input class="search" 
+                type="text" 
+                placeholder="城市/小区名称" 
+                value="{{value}}"
+                bindinput="getInputValue"></input>
+        <text class="text" bind:tap="onSearch">搜索</text>
+    </view> 
+</view>
+
+<!-- 搜索历史 标题 -->
+<view class="read-in" >
+    <view class="headline">
+      <view class="head-headline">
+        <view class="headline-size">搜索历史</view> 
+      </view>
+      <!-- 历史  -->
+      <view class="lately-main">
+        <view class="chunk" wx:for="{{historysearch}}" wx:key="index" catchtap="searchbegin" bindtap="getInputValue" data-postname="{{item.title}}">
+          <text>{{item.title}}</text>
+        </view>
+      </view>
+    </view>
+   
+</view>

@@ -1,0 +1,109 @@
+<view class="container">
+    <form bindsubmit="formSubmit">
+        <!-- 业主名字 -->
+        <!-- <view class="h-name">
+            <text>业主名字：</text>
+            <input name="realName" placeholder="请输入真实名字" placeholder-style="font-size:28rpx" value="{{form.realName}}" />
+        </view>
+        <view class="line"></view> -->
+        <!-- 手机号 -->
+        <!-- <view class="h-name">
+            <text>手 机 号 ：</text>
+            <input name="phone" placeholder="请输入手机号" placeholder-style="font-size:28rpx" value="{{form.phone}}" />
+        </view>
+        <view class="line"></view> -->
+        <!-- 名称 -->
+        <view class="h-houseName">
+            <text>房源名称：</text>
+            <input name="houseName" placeholder="请输入房子名称" placeholder-style="font-size:28rpx" value="{{form.houseName}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 房子省市区 -->
+        <view class="h-addr">
+            <text>房源区域：</text>
+            <picker mode="region" bindchange="onRegionChange" value="{{region}}">
+                <view class="picker">{{region[0]}}，{{region[1]}}，{{region[2]}}</view>
+            </picker>
+        </view>
+        <view class="line"></view>
+        <!-- 地址 -->
+        <view class="h-addrdetail">
+            <text>详细地址：</text>
+            <input name="addrDetail" placeholder="请输入详细地址" placeholder-style="font-size:28rpx" value="{{form.addrDetail}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 租金 -->
+        <view class="h-rentPrice">
+            <text>每月租金 ：</text>
+            <input name="rentPrice" type="digit"  placeholder="请输入租金" placeholder-style="font-size:28rpx" value="{{form.rentPrice}}" />
+        </view>
+        <view class="line"></view>
+         <!-- 户型 -->
+        <view class="h-type">
+            <text>房源户型：</text>
+            <input name="type" placeholder="室/厅/卫" placeholder-style="font-size:28rpx" value="{{form.type}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 租住类型 -->
+        <view class="h-mode">
+            <text>租住类型：</text>
+            <input name="mode" placeholder="整租/合租" placeholder-style="font-size:28rpx" value="{{form.mode}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 最多租住人数 -->
+        <view class="h-maxNum">
+            <text>最多租住人数:</text>
+            <input name="maxNum" type="number" placeholder="最多几人租住" placeholder-style="font-size:28rpx" value="{{form.maxNum}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 房屋面积 -->
+        <view class="h-area">
+            <text>房屋面积：</text>
+            <input name="area" type="digit" placeholder="请输入面积（㎡）" placeholder-style="font-size:28rpx" value="{{form.area}}" />
+        </view>
+        <view class="line"></view>
+        <!-- 详细描述 -->
+        <view class="describe">
+            <textarea name="describe" placeholder="描述会给你带来快速成交哦~" maxlength="{{max}}" placeholder-style="font-size:28rpx;color:#ced6e0" bindinput="onDescribeInput"></textarea>
+            <view class="indicator">{{currentWordNumber}}/{{max}}</view>
+        </view>
+        
+        <view class="line"></view>
+        <!-- 照片 -->
+        <view class='up-pic'>
+            <text class="addPic">添加图片</text>
+            <view class='flex pic-box'>
+                <block wx:key="imgbox" wx:for="{{imgbox}}">
+                    <view class='ap-box'>
+                        <view class='add-pic'>
+                            <image class='add-pic' src='{{item}}'></image>
+                            <view class='img-de' data-deindex='{{index}}' bindtap='imgDelete1'>
+                                <image class='img-del' src='/icon/del.png'></image>
+                            </view>
+                        </view>
+                    </view>
+                </block>
+                <view class='add-pic' bindtap='addPic1' wx:if="{{imgbox.length<6}}">
+                    <image class='img-add' src='/icon/add.png'></image>
+                </view>
+            </view>
+        </view>
+        <!-- 配置 -->
+        <!-- <view class="facility">
+            <view class="title">配置设施</view>
+            <view class="list">
+                <view class="item {{item.active ? 'active': ''}}" wx:for="{{facilities}}" wx:key="index" bind:tap="onChooseFacTap" data-index="{{index}}">
+                    {{item.name}}
+                </view>
+            </view>
+        </view> -->
+        <!-- 发布按钮 -->
+        <view class="btn-area">
+            <button formType="submit">提交</button>
+        </view>
+        <view>
+          '\n'
+        </view>
+    </form>
+   
+</view>

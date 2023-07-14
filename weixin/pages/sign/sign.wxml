@@ -1,0 +1,65 @@
+<view class="container" >
+    <form bindsubmit="formSubmit">
+   
+    <view class="time">
+        <view class="title">租期</view>
+        <input class="content" type="number" bindinput='getInputName'></input>
+        <view class="title">月</view>
+    </view>
+    <!-- tips -->
+    <view class="tips">
+        <!-- 合同 -->
+        <view class="reorder">
+            <view class="title" style="text-align:center;font-weight:bold;font-size:medium">租房合同</view>
+            <view class="content">
+              出租方：{{house[0].uRealname}}（以下简称甲方） 身份证号：{{house[0].uNumber}}
+            </view>
+            <view class="content">
+              承租方：{{uid}}（以下简称乙方） 身份证号：{{house[0].uNumber}}          
+            </view>
+            <view class="content">
+             双方经友好协商，根据《合同法》及国家、当地政府对房屋租赁的有关规定，就租赁房屋一事达成以下协议。</view>
+             <view class="content">
+              第一条 出租房屋坐落地址{{house[0].hAddress}}
+             </view>
+             <view class="content">
+              第二条 甲方的责任。
+            </view>
+            <view class="content">
+　　1．甲方如未按本合同规定的时间向乙方提供租赁房屋，应按延迟期间内乙方应交租金的10％计算，向乙方偿付违约金。</view>
+<view class="content">
+　　2．租赁期间，出租房屋的维修由甲方负责，如租赁房发生重大自然损坏或有倾倒危险而甲方又不修缮时，乙方可以退租或代甲方修缮，并可以用修缮费用收据抵消租金。</view>
+<view class="content">
+　　3．租赁期间，如甲方确需收回房屋自主，必须提前1个月书面通知乙方，解除合同，甲方应付给乙方违约金，违约金以剩余租期内应交租金总额的10％计算。
+             </view>
+
+             <view class="content">
+              第三条 乙方的责任。
+            </view>
+            <view class="content">
+              　　1．乙方依约交付租金，甲方如无正当理由拒收，乙方不负迟延交租的责任；乙方如果拖欠租金，应按中国人民银行延期付款的规定向甲方偿付违约金。乙方如拖欠租金达1月以上，甲方可以从乙方履约金（如乙方付有履约金）中扣除租金，并可收回出租之房屋。</view>
+<view class="content">
+  　　2．租赁期间，房屋管理费、水电费由乙方负担。</view>
+<view class="content">
+  　　3．租赁期间，如乙方确因特殊情况需要退房，必须提前1个月书面通知甲方，解除合同，应付给甲方违约金，违约金以剩余租期内应交租金总额的10％计算。
+             </view>
+             <view class="content">
+              　　4．租赁期间，乙方不得擅自改变房屋的结构及用途，乙方如因故意或过失造成租用房屋和设备的毁损，应负责恢复原状或赔偿经济损失。乙方如需装修墙窗，须事先征得甲方同意。
+             </view>
+             <view class="content">
+              　　5．租赁期满或合同解除，乙方必须按时搬出全部物件。搬迁后＿日内房屋里如仍有余物，视为乙方放弃所有权，由甲方处理。
+             </view>
+            
+        </view>
+        
+    </view>
+    <!-- 价格 提交订单 -->
+    <view class="confirm">
+        <view class="computed-price">总价￥{{totalRent}}</view>
+        
+        <button class="submit-order" formType="submit">提交订单</button>
+    </view>
+
+    
+</form>    
+</view>

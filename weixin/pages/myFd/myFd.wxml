@@ -1,0 +1,21 @@
+<view wx:if="{{feedbackList.length <=0 }}" class="weui-flex emptyContent">
+   <view>暂无反馈数据</view>
+</view>
+
+<block wx:for="{{feedbackList}}" wx:key="index">
+ <view class="weui-panle feedback_main">
+  <view class="weui-flex">
+     <view class="weui-flex__item">反馈内容</view>
+     <view class="weui-flex__item">{{item.fdDetail}}</view>
+  </view>
+  <view class="weui-flex">
+     <view class="weui-flex__item">反馈时间</view>
+     <view class="weui-flex__item">{{item.fdTime}}</view>
+  </view>
+  <view class="weui-flex" wx:if="{{item.fdResult != '' }}">
+     <view class="weui-flex__item">管理员回复</view>
+     <view class="weui-flex__item">{{item.fdResult}}</view>
+   </view> 
+  </view>
+</block>
+ 

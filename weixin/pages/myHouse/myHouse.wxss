@@ -1,0 +1,86 @@
+/* pages/myHouse/myHouse.wxss */.card {
+	padding-top: 60rpx;
+	position: relative;
+	overflow: hidden;
+	text-align: center;
+	width: 100%;
+	/* background-color: violet; */
+}
+
+.card .card-items {
+	width: 95%;
+	/* height: 480rpx; */
+	display: inline-block;
+	margin: 0 auto;
+	padding-left: 10rpx;
+	/* background-color: tomato; */
+ 
+}
+ .card .card-items .card-item {
+	vertical-align: top;
+	width: 700rpx;
+	height: 300rpx;
+	display: inline-block;
+	margin-right: 20rpx;
+	position: relative;
+	background: white;
+	border-bottom: 1px solid #ccc;
+	padding-top: 10rpx;
+	padding-bottom: 20rpx;
+	overflow: hidden;
+	margin: 10rpx;
+	/* background-color: teal; */
+}
+.card .card-items .card-item image {
+	height: 240rpx;
+	width: 40%;
+	float: left;
+	padding-top: 20rpx;
+	padding-right: 20rpx;
+}
+
+.card .card-items .card-name {
+	color: #222;
+	padding: 0 10rpx;
+	white-space: pre-line;
+	font-weight: bolder;
+	font-size:medium;
+	text-align: justify;
+	line-height: 50rpx;
+	padding-left: 40rpx;
+	margin-top: 10rpx;
+}
+.card .card-items .card-info {
+	font-size: 25rpx;
+	color: #666;
+	padding: 0 20rpx;
+	text-align: left;
+	line-height: 40rpx;
+	margin-top: 20rpx;
+}
+.card .card-items .card-price-m1 {
+	padding: 0 20rpx;
+	text-align: left;
+	line-height: 40rpx;
+	margin-top: 20rpx;
+
+}
+.card .card-items .card-price-m1 .card-price-m1-text {
+	font-weight:bold;
+	font-size: 35rpx;
+	color: #f9541c;
+}
+.card .card-items .card-price-m1 .card-price-m1-text:after {
+	content: "元/月";
+	font-size: 35rpx;
+	color: #f9541c;
+	font-weight: bold;
+}
+.card .card-items 
+.update button{
+  width: 150rpx;
+  height: 50rpx;
+  padding:0rpx;
+  margin-right: 30rpx;
+  float: right;
+}

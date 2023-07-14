@@ -1,0 +1,13 @@
+/* pages/myFd/myFd.wxss */
+.emptyContent{
+  text-align: center;
+  margin: 5px;
+  padding: 5px;
+
+}
+.feedback_main{
+  margin: 5px;
+  padding: 5px;
+  border: 1px dashed #FEB7B4;
+  border-radius: 15px;
+}

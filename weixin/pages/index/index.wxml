@@ -1,0 +1,67 @@
+<!--index.wxml-->
+<view>
+  <!-- 搜索框 -->
+  <view class="search">
+    <!-- <SearchBar class="search-inp" ></SearchBar> -->
+    <view class="container"> 
+  <input class="search_bar" type="text"
+            placeholder="搜索"
+            value="{{value}}"
+            bind:tap="onSearch">
+  </input>
+</view>
+  </view>
+
+  <!-- 轮播图部分 -->
+  <view class="recommendation"> 
+     <swiper class="swiper" duration="{{duration}}" indicator-dots="{{indicatorDots}}" autoplay="{{true}}" indicator-active-color="#ffffff">
+      <block wx:for="{{swiperImg}}" wx:key='index'>
+        <swiper-item>
+          <image src="{{item}}" class="slide-image" mode="widthFix" />
+        </swiper-item>
+      </block>
+    </swiper>
+  </view>
+
+   <!-- 房源推荐部分 -->
+  <view class="recommend-house">
+      <!-- 推荐房源 文字部分-->
+      <view class="recommend-tip">
+        <text class="recommend-text1">推荐房源</text>
+        <text class="recommend-text2">最优质的的房源都在这里~</text>
+      </view>
+      <!-- 地址 房屋类型(户型) 租住类型(方式) -->
+      <view class="recommend-menu">
+      <!-- 地区 -->
+        <picker mode="region" class="menu" bindchange="changeArea1" value="{{region}}">
+          <view class="menu">{{region[0]}}<text space='nbsp'>   |   </text>{{region[1]}}</view>
+          
+          <!-- <text>{{selectCity ? city:'区域'}}</text> -->
+        </picker>
+        
+      </view>
+  </view>
+
+<!-- 房源部分 -->
+  <view class="card" style="padding-top:10px;">
+		<view class="card-items">
+			<scroll-view scroll-y="true" style=" display: flex">
+				<view wx:for="{{house}}" class="card-item" catchtap="onHouseDetail" wx:key="index" data-id="{{item.hID}}">
+					<image src="{{item.hPic}}" />
+					<view class="card-name" >{{item.hName}}</view>
+					<view class="card-info"><span>{{item.hMode}} | {{item.hArea}}m² | {{item.hcity}}</span></view>
+					<view class="card-price-m1"><span class="card-price-m1-text">{{item.hRent}}</span></view>
+<!-- 收藏 -->
+					<!-- <view class="save" >                          
+            <image src="{{ starPic[0] }}" mode="" catchtap="handleStar" data-id="{{item.hID}}" />
+          </view> -->
+				</view>
+        
+			</scroll-view>
+		</view>
+	</view>
+
+
+</view>
+
+

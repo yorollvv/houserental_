@@ -1,0 +1,19 @@
+
+
+<!--pages/message/message.wxml-->
+<view class="body">
+  <view class="typing">
+    <textarea value="{{words}}" bindinput="getWords"></textarea>
+    <!-- <textarea value="{{words}}" ></textarea> -->
+    <button bindtap="send">留言</button>
+  </view>
+  <!-- <view class="divLine"></view> -->
+  <!-- <view class="messages" wx:for="{{messageList}}" wx:key="index">
+    <view class="message">
+      <text class="name">{{item.name}} 说：</text>
+      <text class="words">{{item.words}}</text>
+      <text class="time">{{item.time}}</text>
+      <view class="wordsLine"></view>
+    </view>
+  </view> -->
+</view>

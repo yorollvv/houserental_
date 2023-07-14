@@ -1,0 +1,15 @@
+
+<view class="card" style="padding-top:10px;">
+		<view class="card-items">
+			<scroll-view scroll-y="true" style=" display: flex">
+				<view wx:for="{{house}}" class="card-item" catchtap="onHouseDetail" wx:key="index" data-id="{{item.hID}}">
+					<image src="{{item.hPic}}" />
+					<view class="card-name" >{{item.hName}}</view>
+					<view class="card-info"><span>{{item.hMode}} | {{item.hArea}}m² | {{item.hcity}}</span></view>
+					<view class="card-price-m1"><span class="card-price-m1-text">{{item.hRent}}</span></view>
+         
+				</view>
+        
+			</scroll-view>
+		</view>
+	</view>

@@ -1,0 +1,84 @@
+<!-- 背景图 -->
+<view class="bg-box">
+  <image src="/icon/my-background.jpg"></image>
+  <!-- 个人信息框 -->
+  <view class="head-box">
+	<!-- 个人信息 -->
+    <view class="userAvatar-box">
+      <open-data type="userAvatarUrl"></open-data>  
+    </view>
+    <view class="userNickName">
+      <open-data type="userNickName"></open-data>
+    </view>
+
+    <view> 
+      <button class="btn1" plain="true" size="mini" style="font-size: smaller;" hover-class="button-hover" bindtap="loginout">退出登录</button>  
+      <!-- <view> -->
+        <text class="btn2" style="background-color: red;color: white;padding:3px;border-radius: 5px;" wx:if="{{isIdent==2}}">认证失败</text>
+        <text class="btn2" style="background-color: rgb(5, 117, 24);color: white;padding:3px;border-radius: 5px;" wx:if="{{isIdent==1}}">已认证</text>
+        <text class="btn2" style="background-color: rgb(195, 201, 196);color: white;padding:3px;border-radius: 5px;" wx:if="{{isIdent==0}}">未认证</text>
+      <!-- </view> -->
+
+
+    </view>
+    
+	
+		
+<!--     
+    <view class="btn2">
+      <text style="background-color: rgb(5, 117, 24);color: white;padding:3px;border-radius: 5px;" wx:if="{{isIdent==1}}">已认证</text>
+    </view> -->
+
+
+    <!-- <button class="btn2" plain="true" size="mini" style="font-size: smaller;" hover-class="button-hover" bindtap="loginout">111</button>  -->
+
+    <!-- <view >
+      <text style="background-color: red;color: white;padding:3px;border-radius: 5px;" wx:if="{{isIdent==2}}">认证失败</text>
+      <text style="background-color: rgb(5, 117, 24);color: white;padding:3px;border-radius: 5px;margin-left: 50px;" wx:if="{{isIdent==1}}">已认证</text>
+      <text style="background-color: rgb(195, 201, 196);color: white;padding:3px;border-radius: 5px;" wx:if="{{isIdent==0}}">未认证</text>
+    </view> -->
+    <!-- 收藏浏览 -->
+    <view class="navBar">
+      <view catch:tap="onStar">
+          <image src="/icon/star.png" />
+          <text>我的收藏</text>
+      </view>
+      <view catch:tap="onidentity">
+            <image src="/icon/identity.png" />
+            <text >实名认证</text>
+        </view>
+    </view>
+    <!-- 房屋管理 -->
+    <view>
+      <text style="font-weight: bolder;font-size:medium;">房屋管理</text>
+      <view class="navBar-house">
+       
+        <view catch:tap="onMyHouse">
+            <image src="/icon/myHouse.png" />
+            <text >我的房源</text>
+        </view>
+        <view catch:tap="onMyRent">
+            <image src="/icon/myRent.png" />
+            <text >我的租房</text>
+        </view>
+        <view catch:tap="onMyLease">
+            <image src="/icon/out.png" />
+            <text >出租房屋</text>
+        </view>
+        
+      </view>
+    </view>
+    <!-- 个人管理 -->
+    <view>
+      <text style="font-weight: bolder;font-size:medium;">租房须知</text>
+      <view class="navBar-house">
+        <view catch:tap="onAgreement">
+            <image src="/icon/agreement.png" />
+            <text >用户服务协议</text>
+        </view>
+      </view>
+    </view>
+
+  </view>
+  
+</view>

@@ -1,0 +1,6 @@
+{
+  "usingComponents": {
+    "house-card": "/components/house-card/house-card"
+  },
+  "navigationBarTitleText": "我的收藏"
+}

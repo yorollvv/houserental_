@@ -1,0 +1,9 @@
+{
+  "usingComponents": {
+		"SearchBar":"/components/SearchBar/SearchBar",
+		"house-card": "/components/house-card/house-card"
+  },
+  "navigationBarTitleText": "租1个房",
+  
+  "enablePullDownRefresh": false
+}

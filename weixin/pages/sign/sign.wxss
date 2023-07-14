@@ -1,0 +1,79 @@
+/* pages/onlineSign/onlineSign.wxss */
+page{
+  background-color: #ffffff;
+}
+.container{
+  overflow-x: hidden;
+}
+
+/* 租期样式 */
+.time{
+  width: 100%;
+  height: 150rpx;
+  /* background-color: #fff; */
+  margin-top: 25rpx;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.time .title{
+  font-size: 36rpx;
+  margin-right: 20rpx;
+  margin-left: 37rpx;
+  
+}
+.time .content{
+  font-size: 28rpx;
+  margin-right: 60rpx;
+  padding: 5rpx;
+  background-color: rgb(209, 209, 209);
+  width:100rpx;
+  border-radius: 6px;
+  text-align: center;
+}
+/* tips */
+.tips{
+  color: rgb(98, 95, 95);
+  margin-top: 25rpx;
+  background-color: #f3f2f2;
+  height: 850rpx;
+}
+
+.tips .reorder
+{
+  font-size: 28rpx;
+  margin-top: 20rpx;
+}
+.tips .content{
+  font-size: 26rpx;
+}
+/* 价格 提交订单 */
+.confirm{
+  position: fixed;
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  margin-top: 30rpx;
+  background-color: #fff;
+  height: 100rpx;
+  bottom: 0;
+}
+.confirm .computed-price{
+  color:#FEB7B4;
+  font-size: 40rpx;
+  font-weight: 600;
+  margin-left: 120rpx;
+  line-height: 96rpx;
+}
+
+.confirm .submit-order{
+  width: 40%;
+  background-color: #FEB7B4;
+  text-align: center;
+  line-height: 69rpx;
+  transform: translateX(16rpx);
+  color: #fff;
+  font-size: 30rpx;
+  margin-right: 40rpx;
+  
+}

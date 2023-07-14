@@ -1,0 +1,126 @@
+.bg-box {
+    width: 100%;
+    height: 150px;
+    z-index: 1;
+    display: flex;
+    position: relative;
+}
+.bg-box image{
+  width: 100%;
+  height: 250rpx;
+  position: absolute;
+}
+.head-box {
+  position: absolute;
+  left: 50%;
+  margin-left: -340rpx;
+  width: 680rpx;
+  z-index: 2;
+  height: 150px;
+  margin-top: 10rpx;
+  background-color: white;
+  box-shadow: 5px 5px 5px rgba(39, 48, 57, 0.05);
+}
+.userAvatar-box {
+  width: 70px;
+  height: 70px;
+  margin-top: 10px;
+  margin-left: 10px;
+  float: left;
+  border-radius: 50%;
+  overflow:hidden;
+	display:block;
+}
+.userNickName {
+
+  margin-left: 20px;
+  float: left;
+  margin-top: 50rpx;
+  font-weight: bolder;
+  font-size: 45rpx;
+}
+.btn1{
+  font-weight: bolder;
+  /* font-size: 50rpx; */
+  font-size: 25rpx;
+  margin-left: -150rpx;
+	margin-top: 130rpx;
+}
+.btn2{
+  font-weight: bolder;
+  /* font-size: 50rpx; */
+  font-size: 25rpx;
+  margin-left: 50rpx;
+  margin-top: 130rpx;
+  
+}
+.button_hover{
+  background-color:pink!important;
+  font-style: italic;
+}
+.navBar{
+  display: flex;
+  margin-top: 10rpx;
+  justify-content: space-around;
+}
+.navBar view{
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.navBar image{
+  width: 70rpx;
+  height: 70rpx;
+  margin-left: 10rpx;
+  margin-top: -10rpx;
+}
+.navBar text{
+  font-size: 32rpx;
+  margin-top: 70rpx;
+  margin-left: -20rpx;
+  color: #2c2c2c;
+}
+.navBar-house{
+  display: flex;
+  margin-top: 10rpx;
+  justify-content: flex-start;
+}
+.navBar-house view{
+  display: flex;
+  flex-direction: column;
+  padding: 40rpx;
+}
+.navBar-house image{
+  width: 65rpx;
+  height: 65rpx;
+  margin-left: 10rpx;
+  margin-top: -10rpx;
+}
+.navBar-house text{
+  font-size: 30rpx;
+  margin-top: 70rpx;
+  margin-left: -20rpx;
+  color: #2c2c2c;
+}
+
+.menu{
+  width: 680rpx;
+  height: 50px;
+  /* margin: 0 auto; */
+  font-size: 35rpx;
+  font-weight: bold;
+  border-bottom: 1px solid #ccc;
+  padding: 15px 10px 0px 5px;
+  margin-top: 10rpx;
+  position: relative;
+}
+.menu image{
+  width: 45rpx;
+  height: 45rpx;
+  margin-left: 480rpx;
+  margin-top: 0rpx;
+  float: left;
+}
+.aa{
+  background-color: lightgray;
+}

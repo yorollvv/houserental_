@@ -1,0 +1,5 @@
+{
+  "usingComponents": {
+    "house-info": "/components/house-info/house-info"
+  }
+}
